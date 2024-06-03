@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"nodemon src/index.js"
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Anmol10153/youtubeBack#readme",
   "devDependencies": {
-    "nodemon": "^3.1.2"
+    "nodemon": "^3.1.2",
+    "prettier": "^3.3.0"
   }
 }
