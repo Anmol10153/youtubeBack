@@ -74,7 +74,32 @@ NOTE : <!-- express documentation for request and response different types --> |
   1. Status codes : ![Status codes](image-4.png)
 
 
+# Models
+- steps: 
+  1. import mongoose, {Schema, model} from 'mongoose'
+  2. const userSchema = Schema({},{timestamps:true})
+  3. export const user = model('user', userSchema)
+
+  package we used : mongoose-aggregate-pagenate-v2 is used for aggrigation queries. ""TRUE POWER""
+
+  - we can write some middlewares with mongoose model like pre post.
+  
+  - package : bcrypt & jwt
+  - bcrypt : hash your password
+  - token : jwt (jsonwebtoken)
+    1. in jwt, secret base64 is important which provide the token encrypted and which cannot be decrypt easily else we have lots of decrpyter available in the market.
+  - jwt.io 
+
+  - how to encrypt password : 
+      1. we need mongoose hooks available in the middleware in the mongoose documentation. 
+      2. we need to check the events which we will use in middleware. 
+      3. ![events](image-5.png)
+
+  - jwt is a bearer token, means its like a key. 
+
 # Main data of index.js
 - Main file : index.js
 - configuration of cors. USE method is used for the middleware invoking.
   1. app.use(cors()) [ we can apply condition on cors as well ]
+  2. payload is the fancy name of data
+  3. inside arrow function, "this" ka reference nahi hota h, context nahi hota h.
