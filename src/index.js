@@ -27,9 +27,21 @@ const app = express();
 */
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
+import app from "./app.js";
 
-dotenv.config(
-  {path:'./env'}
-)
+dotenv.config({path:'./env'})
 
-connectDB();
+// in promise, then and catch we will use callback function.
+connectDB() // db should have to connect
+.then(()=>{
+  app.on("error",(error)=>{
+    console.log(error,"mongo listen error")
+    throw error
+  })
+  app.listen(process.env.PORT || 8000, ()=>{
+    console.log( `app is running on port ${process.env.port}`)
+  }); // app need to listen
+})
+.catch((err)=>{
+  console.log(`Mongo DB connection failed`,err);
+});
