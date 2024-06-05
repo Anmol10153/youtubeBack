@@ -66,10 +66,13 @@ NOTE : <!-- express documentation for request and response different types --> |
 
 # middleware 
  ![middleware image](image.png)
+ first middleware : multer
+ we need to configure the middleware as well.
+ - NOTE : read documentation about how to use the multer for single upload, array etc.
 
 # higher order function declaration: 
 ![2 Methods](image-3.png)
-
+- folder utils OR utility where we extends the class of javascript(if availabl)
 - to standardise the practice of error and response : means make the format similar for both error and response: !nodejs api error
   1. Status codes : ![Status codes](image-4.png)
 
